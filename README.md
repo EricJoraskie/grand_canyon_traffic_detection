@@ -11,7 +11,7 @@ One weekend in March 2021 I decided I wanted to drive up to the Grand Canyon (fr
 I decided the first and easiest task would be to simply classify the images into a few traffic-density categories. After some image labelling *(I gained such an appreciation for clean datasets and the work that goes into creating them during this process)* which included traffic classification and some bounding box drawing, I developed a simple Keras CNN model to predict the category and fine-tuned an SSD ResNet50 object detector model using core TensorFlow.   
 Here is an example output of the RV detector model:
 
-<img src='imgs/rv_detector.png' height='245' width='357'>
+![Example RV detector Output](/imgs/rv_detector.png)
 
 Once I had a model that performed reasonably well on the dataset *(88% accuracy -- there is a confusion matrix in the `traffic_level_classfier.ipynb` notebook with more on the results)*, I quickly threw together a simple Flask app that:
 - Restores the model
@@ -21,11 +21,11 @@ Once I had a model that performed reasonably well on the dataset *(88% accuracy 
 - Uses Bootstrap v4.4.1 (https://getbootstrap.com/) CSS file for some quick (not included here)
 - has a fun button to display the image, so you can verify if the model was right.    
 
-<img src='imgs/isTheGrandCanyonBusy.png' height='245' width='387'>
+![Frame from dev website running](/imgs/isTheGrandCanyonBusy.png)
 
 The button was actually more so a test of the "revealing hidden content" functionality, as I'd like to also display further predictions and analysis such as these full-day traffic heatmaps (prototypes, they'll be prettier):
 
-<img src='imgs/full_day_traffic_heatmap.png' height='245' width='387'>
+![Heatmap example](/imgs/full_day_traffic_heatmap.png)
 
 
 
