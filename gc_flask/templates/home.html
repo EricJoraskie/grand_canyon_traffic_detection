@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+      <title>Is the Grand Canyon Busy?</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/gc_custom.css') }}">
+  </head>
+  <body class='bg-dark text-secondary'>
+    <div class='container-fluid'>
+      <div class="row justify-content-md-center">
+        <div class="col-xl-5 col-lg-6 col-md-8">
+          <div class="section-title text-center title-ex1">
+            <h1>Is the Grand Canyon Busy?</h1>
+          </div>
+            <div class="row justify-content-center my-5"></div>
+              <div class='col-12'></div>
+                <div class='text-center'>
+                  <div class='display-1' id='answer'>
+                    <p class='{{ color }}'>{{ answer }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-center my-5"></div>
+              <div class='col-12'></div>
+                <div class='text-center'>
+                  <button type="button" class="btn btn-secondary" onclick="reveal()">How do we know?</button>
+                </div>
+              </div>
+            </div>
+            <div class='container'>
+              <div class="row justify-content-center my-5"></div>
+                <div class='col-4'></div>
+                  <img id='image' class="mx-auto d-block" src='{{ im }}' alt='Grand Canyon South Rim entrance webcam' height="480" width="640">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    function invisible() {
+      document.getElementById("image").style.visibility = "hidden";
+    }
+    
+    function reveal() {
+      var x = document.getElementById('image');
+      if (x.style.visibility === 'hidden') {
+        x.style.visibility = 'visible';
+      } else {
+        x.style.visibility = 'hidden';
+      }
+    }
+    invisible()
+    </script>
+  </body>
+</html>
