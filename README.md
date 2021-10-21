@@ -18,7 +18,7 @@ Once I had a model that performed reasonably well on the dataset *(88% accuracy 
 - Grabs the image from the Grand Canyon website
 - Preps the image for the model
 - Uses the model for inference
-- Uses Bootstrap v4.4.1 (https://getbootstrap.com/) CSS file for some quick (not included here)
+- Uses Bootstrap v4.4.1 (https://getbootstrap.com/) CSS file for some quick styling (not included here)
 - has a fun button to display the image, so you can verify if the model was right.    
 
 ![Frame from dev website running](/imgs/isTheGrandCanyonBusy.png)
